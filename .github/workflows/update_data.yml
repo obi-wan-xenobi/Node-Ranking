@@ -26,7 +26,6 @@ jobs:
       - name: Print installed packages
       run: pip list
 
-
     - name: Run Python script
       env:
         GITHUB_PAT: ${{ secrets.GITHUB_PAT }}  # Pass the GitHub PAT as an environment variable
