@@ -1,7 +1,23 @@
 import csv
 import json
+import re
 import requests
 from bs4 import BeautifulSoup
+
+# Function to parse time difference string to milliseconds
+def parse_time_diff(time_diff_str):
+    # Regular expression pattern to match time difference formats
+    time_pattern = re.compile(r'(\d+(\.\d+)?)([mµ]s|s)?')
+    
+    match = time_pattern.match(time_diff_str)
+    if match:
+        value = float(match.group(1))
+        unit = match.group(3)
+        if unit == 's':
+            value *= 1000  # Convert seconds to milliseconds
+        return value
+    else:
+        return None
 
 # Send a GET request to the website
 url = "http://186.233.186.56:5002/nodes"
@@ -26,10 +42,9 @@ if response.status_code == 200:
         block_id = int(cells[1].text)
         tx_hash = cells[2].text
         time_diff_str = cells[3].text
-        time_diff = float(time_diff_str.replace("ms", "").replace("s", "").replace("µ", ""))  # Convert µs to ms directly
-        timestamp = cells[4].text
-        
-        nodes_data.append({"Node IP": node_ip, "Block ID": block_id, "Time Diff": time_diff})
+        time_diff = parse_time_diff(time_diff_str)
+        if time_diff is not None:  # Check if time_diff is valid
+            nodes_data.append({"Node IP": node_ip, "Block ID": block_id, "Time Diff": time_diff})
     
     # Sort the nodes based on their block ID and time differences
     sorted_nodes = sorted(nodes_data, key=lambda x: (-x["Block ID"], x["Time Diff"]))
