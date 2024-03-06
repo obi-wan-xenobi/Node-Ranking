@@ -18,17 +18,19 @@ jobs:
         python-version: '3.x'
 
     - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install beautifulsoup4 requests
+      run: pip install requests
 
     - name: Run Python script
-      run: python Node_output.py
+      env:
+        PAT: ${{ secrets.PAT }}  # Pass the PAT as an environment variable
+      run: |
+        echo "${PAT}" > token.txt  # Write PAT to a file
+        python update_json.py  # Execute the Python script to update the JSON file
 
     - name: Commit changes
       run: |
-        git config --global obiwanxenobi@gmail.com
-        git config --global obi-wan-xenobi
+        git config --global user.email "you@example.com"
+        git config --global user.name "Your Name"
         git add .
         git commit -m "Update data"
         git push
