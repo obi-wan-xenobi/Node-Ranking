@@ -3,6 +3,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import os
+from datetime import datetime  # Import datetime module
 
 # Function to parse time difference string to milliseconds
 def parse_time_diff(time_diff_str):
@@ -47,6 +48,10 @@ def update_json_file(data):
     
     # Merge the new data with the existing content
     current_content.extend(data)
+    
+    # Add timestamp to the data
+    timestamp = datetime.now().isoformat()
+    current_content.append({"Last Updated": timestamp})  # Add timestamp field
     
     # Encode the updated content to JSON
     updated_content = json.dumps(current_content, indent=4)
@@ -118,4 +123,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
