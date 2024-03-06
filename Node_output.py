@@ -45,8 +45,9 @@ def update_json_file(data):
     response = requests.get(url, headers=headers)
     response_json = response.json()
     
-    # Decode the content from base64
-    current_content = json.loads(requests.utils.decode_base64(response_json["content"]))
+    import base64
+    current_content = json.loads(base64.b64decode(response_json["content"]).decode("utf-8"))
+
     
     # Merge the new data with the existing content
     current_content.extend(data)
