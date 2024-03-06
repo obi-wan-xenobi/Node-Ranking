@@ -25,12 +25,12 @@ jobs:
         PAT: ${{ secrets.PAT }}  # Pass the PAT as an environment variable
       run: |
         echo "${PAT}" > token.txt  # Write PAT to a file
-        python update_json.py  # Execute the Python script to update the JSON file
+        python Node_output.py  # Execute the Python script to update the JSON file
 
     - name: Commit changes
       run: |
-        git config --global user.email "you@example.com"
-        git config --global user.name "Your Name"
+        git config --global obiwanxenobi@gmail.com
+        git config --global obi-wan-xenobi
         git add .
         git commit -m "Update data"
         git push
