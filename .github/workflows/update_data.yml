@@ -3,7 +3,13 @@ name: Update Data
 on:
   schedule:
     - cron: '*/1 * * * *'  # Run every 1 minute
-
+  push:
+    branches-ignore:
+      - "main"
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:  # Adding this line will enable manual triggering.
+  
 jobs:
   update:
     runs-on: ubuntu-latest
