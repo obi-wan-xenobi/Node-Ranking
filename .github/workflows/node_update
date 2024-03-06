@@ -1,0 +1,36 @@
+name: Update Data
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'  # Run every 1 minutes
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install requests
+
+    - name: Run Python script
+      env:
+        PAT: ${{ secrets.PAT }}  # Pass the PAT as an environment variable
+      run: |
+        echo "${PAT}" > token.txt  # Write PAT to a file
+        python Node_output.py  # Execute the Python script to update the JSON file
+
+    - name: Commit changes
+      run: |
+        git config user.name "obi-wan-xenobi"
+        git config user.email "obiwanxenobi@gmail.com"
+        git add .
+        git commit -m "Update data"
+        git push
