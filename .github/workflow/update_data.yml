@@ -2,7 +2,7 @@ name: Update Data
 
 on:
   schedule:
-    - cron: '*/15 * * * *'  # Run every 15 minutes
+    - cron: '*/1 * * * *'  # Run every 1 minutes
 
 jobs:
   update:
