@@ -29,8 +29,8 @@ jobs:
 
     - name: Commit changes
       run: |
-        git config --global obiwanxenobi@gmail.com
-        git config --global obi-wan-xenobi
+        git config user.name "obi-wan-xenobi"
+        git config user.email "obiwanxenobi@gmail.com"
         git add .
         git commit -m "Update data"
         git push
