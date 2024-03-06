@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
-import json
 import requests
 from bs4 import BeautifulSoup
-import re
+import json
+from datetime import datetime
 import os
-from datetime import datetime  # Import datetime module
+import re
 
 # Function to parse time difference string to milliseconds
 def parse_time_diff(time_diff_str):
