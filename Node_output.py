@@ -1,4 +1,5 @@
 import csv
+import json
 import requests
 from bs4 import BeautifulSoup
 
@@ -28,32 +29,29 @@ if response.status_code == 200:
         time_diff = float(time_diff_str.replace("ms", "").replace("s", "").replace("µ", ""))  # Convert µs to ms directly
         timestamp = cells[4].text
         
-        nodes_data.append((node_ip, block_id, time_diff))
+        nodes_data.append({"Node IP": node_ip, "Block ID": block_id, "Time Diff": time_diff})
     
     # Sort the nodes based on their block ID and time differences
-    sorted_nodes = sorted(nodes_data, key=lambda x: (-x[1], x[2]))
+    sorted_nodes = sorted(nodes_data, key=lambda x: (-x["Block ID"], x["Time Diff"]))
     
     # Get the top 50 nodes with the highest block ID and lowest time differences
     top_50_nodes = sorted_nodes[:50]
     
     # Calculate the Xenobi ranking
     xenobi_ranking = None
-    for i, (node_ip, _, _) in enumerate(top_50_nodes, start=1):
-        if node_ip.startswith("74.50.77"):
+    for i, node in enumerate(top_50_nodes, start=1):
+        if node["Node IP"].startswith("74.50.77"):
             xenobi_ranking = i
             break
     
-    # Write data to CSV file
-    with open("nodes_data.csv", "w", newline="") as csvfile:
-        writer = csv.writer(csvfile)
-        writer.writerow(["Rank", "Node IP", "Block ID", "Time Diff for Last Block (ms)"])
-        for i, (node_ip, block_id, time_diff) in enumerate(top_50_nodes, start=1):
-            writer.writerow([i, node_ip, block_id, time_diff])
-        
-        # Write Xenobi ranking
-        if xenobi_ranking is not None:
-            writer.writerow(["Xenobi Ranking", xenobi_ranking])
+    # Add Xenobi ranking to the data
+    if xenobi_ranking is not None:
+        top_50_nodes.append({"Xenobi Ranking": xenobi_ranking})
     
-    print("Data has been written to nodes_data.csv file.")
+    # Write data to JSON file
+    with open("nodes_data.json", "w") as jsonfile:
+        json.dump(top_50_nodes, jsonfile, indent=4)
+    
+    print("Data has been written to nodes_data.json file.")
 else:
     print("Failed to retrieve data from the website.")
