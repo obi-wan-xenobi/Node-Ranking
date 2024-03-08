@@ -2,6 +2,7 @@ import subprocess
 import requests
 from bs4 import BeautifulSoup
 import json
+import base64  # Add this import statement for base64
 from datetime import datetime
 import os
 import re
