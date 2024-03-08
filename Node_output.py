@@ -51,15 +51,16 @@ def update_json_file(data):
     content = response_json["content"]
     
     if not content:
-        print("Error: Empty content received from the API response.")
-        return
-    
-    try:
-        import base64
-        current_content = json.loads(base64.b64decode(content).decode("utf-8"))
-    except json.decoder.JSONDecodeError as e:
-        print(f"Error decoding JSON content: {e}")
-        return
+        print("Warning: Empty content received from the API response.")
+        current_content = []  # Initialize as an empty list
+    else:
+        try:
+            import base64
+            decoded_content = base64.b64decode(content).decode("utf-8")
+            current_content = json.loads(decoded_content)
+        except json.decoder.JSONDecodeError as e:
+            print(f"Error decoding JSON content: {e}")
+            return
 
     # Merge the new data with the existing content
     current_content.extend(data)
@@ -85,6 +86,7 @@ def update_json_file(data):
         print("JSON file updated successfully.")
     else:
         print(f"Failed to update JSON file. Status code: {response.status_code}")
+
 
 
 def main():
