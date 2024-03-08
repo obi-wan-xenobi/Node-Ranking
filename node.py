@@ -19,16 +19,9 @@ def parse_time_diff(time_diff_str):
 def update_json_file(data):
     filename = "nodes_data.json"
     
-    with open(filename, "r") as file:
-        current_content = json.load(file)
-
-    current_content.extend(data)
-    
-    timestamp = datetime.now().isoformat()
-    current_content.append({"Last Updated": timestamp})
-    
     with open(filename, "w") as file:
-        json.dump(current_content, file, indent=4)
+        timestamp = datetime.now().isoformat()
+        json.dump(data + [{"Last Updated": timestamp}], file, indent=4)
 
 def main():
     url = "http://186.233.186.56:5002/nodes"
