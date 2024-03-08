@@ -1,10 +1,9 @@
-import subprocess
 import requests
 from bs4 import BeautifulSoup
 import json
 from datetime import datetime
 import os
-import re
+import subprocess
 
 # Function to parse time difference string to milliseconds
 def parse_time_diff(time_diff_str):
@@ -43,11 +42,12 @@ def update_json_file(data):
     # Fetch the current content of the JSON file
     response = requests.get(url, headers=headers)
     response_json = response.json()
+
+    print("Response JSON:", response_json)  # Debug print statement
     
     import base64
     current_content = json.loads(base64.b64decode(response_json["content"]).decode("utf-8"))
 
-    
     # Merge the new data with the existing content
     current_content.extend(data)
     
@@ -123,7 +123,7 @@ def main():
     else:
         print("Failed to retrieve data from the website.")
 
-# Function to check if there are changes to commit
+# Check if there are changes to commit
 def has_changes_to_commit():
     result = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
     return bool(result.stdout.strip())
