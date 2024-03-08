@@ -47,7 +47,7 @@ def main():
             time_diff = parse_time_diff(time_diff_str)
             if time_diff is not None:
                 nodes_data.append({"Node IP": node_ip, "Block ID": block_id, "Time Diff": time_diff})
-        sorted_nodes = sorted(nodes_data, key=lambda x: (-x["Block ID"], x["Time Diff"]))
+        sorted_nodes = sorted(nodes_data, key=lambda x: (x["Block ID"], x["Time Diff"]))
         top_50_nodes = sorted_nodes[:50]
         xenobi_ranking = None
         for i, node in enumerate(top_50_nodes, start=1):
