@@ -31,7 +31,7 @@ jobs:
       - name: Run Python script
         env:
           GITHUB_PAT: ${{ secrets.PAT }}  # Pass the GitHub PAT as an environment variable
-        run: python Node_output.py  # Execute the Python script to update the JSON file
+        run: python node.py  # Execute the Python script to update the JSON file
 
       - name: Commit changes
         run: |
