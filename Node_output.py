@@ -20,41 +20,66 @@ def parse_time_diff(time_diff_str):
         return None
 
 def update_json_file(data):
+    # GitHub repository information
     owner = "obi-wan-xenobi"
     repo = "Node-Ranking"
     branch = "main"
     filename = "nodes_data.json"
-    token = os.environ.get("GITHUB_PAT")
-    if not token:
-        print("Error: GitHub PAT not found.")
-        return
-
+    
+    # Personal Access Token (PAT)
+    token = os.environ.get("GITHUB_PAT")  # Access the PAT stored as environment variable
+    
+    # GitHub API URL for updating file content
     url = f"https://api.github.com/repos/{owner}/{repo}/contents/{filename}"
+    
+    # Compose the request headers
     headers = {
         "Authorization": f"token {token}",
         "Accept": "application/vnd.github.v3+json"
     }
-
-    try:
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()
+    
+    # Fetch the current content of the JSON file
+    response = requests.get(url, headers=headers)
+    
+    if response.status_code == 200:
         response_json = response.json()
-        current_content = json.loads(base64.b64decode(response_json["content"]).decode("utf-8"))
-        current_content.extend(data)
-        timestamp = datetime.now().isoformat()
-        current_content.append({"Last Updated": timestamp})
-        updated_content = json.dumps(current_content, indent=4)
-        payload = {
-            "message": f"Update JSON file at {timestamp}",
-            "content": updated_content,
-            "branch": branch,
-            "sha": response_json["sha"]
-        }
-        response = requests.put(url, headers=headers, json=payload)
-        response.raise_for_status()
-        print("JSON file updated successfully.")
-    except requests.RequestException as e:
-        print(f"Error updating JSON file: {e}")
+        if "content" in response_json:
+            content = response_json["content"]
+            if content:
+                # Decode the content from base64 and parse as JSON
+                current_content = json.loads(base64.b64decode(content).decode("utf-8"))
+
+                # Merge the new data with the existing content
+                current_content.extend(data)
+
+                # Add timestamp to the data
+                timestamp = datetime.now().isoformat()
+                current_content.append({"Last Updated": timestamp})  # Add timestamp field
+
+                # Encode the updated content to JSON
+                updated_content = json.dumps(current_content, indent=4)
+
+                # Compose the request payload
+                payload = {
+                    "message": "Update JSON file",
+                    "content": updated_content,
+                    "branch": branch,
+                    "sha": response_json["sha"]
+                }
+
+                # Make a PUT request to update the file
+                response = requests.put(url, headers=headers, json=payload)
+                if response.status_code == 200:
+                    print("JSON file updated successfully.")
+                else:
+                    print(f"Failed to update JSON file. Status code: {response.status_code}")
+            else:
+                print("No content found in the response.")
+        else:
+            print("Content key not found in the response.")
+    else:
+        print(f"Failed to fetch JSON file. Status code: {response.status_code}")
+
 
 def main():
     url = "http://186.233.186.56:5002/nodes"
