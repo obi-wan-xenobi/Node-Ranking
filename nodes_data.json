@@ -130,6 +130,11 @@
         "Time Diff": 5.865
     },
     {
+        "Node IP": "185.166.169.xxx",
+        "Block ID": 2194277,
+        "Time Diff": 5.894
+    },
+    {
         "Node IP": "65.25.183.xxx",
         "Block ID": 2194277,
         "Time Diff": 5.913
@@ -245,14 +250,9 @@
         "Time Diff": 7.151
     },
     {
-        "Node IP": "144.208.193.xxx",
-        "Block ID": 2194277,
-        "Time Diff": 7.19
-    },
-    {
         "Xenobi Ranking": 21
     },
     {
-        "Last Updated": "2024-03-20T16:59:25.743692"
+        "Last Updated": "2024-03-20T17:09:52.055781"
     }
 ]
