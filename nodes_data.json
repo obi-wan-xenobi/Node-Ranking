@@ -1,8 +1,18 @@
 [
     {
+        "Node IP": "96.250.163.xxx",
+        "Block ID": 2194277,
+        "Time Diff": 3.312
+    },
+    {
         "Node IP": "97.85.41.xxx",
         "Block ID": 2194277,
         "Time Diff": 3.819
+    },
+    {
+        "Node IP": "185.166.169.xxx",
+        "Block ID": 2194277,
+        "Time Diff": 3.862
     },
     {
         "Node IP": "189.217.92.xxx",
@@ -130,11 +140,6 @@
         "Time Diff": 5.865
     },
     {
-        "Node IP": "185.166.169.xxx",
-        "Block ID": 2194277,
-        "Time Diff": 5.894
-    },
-    {
         "Node IP": "65.25.183.xxx",
         "Block ID": 2194277,
         "Time Diff": 5.913
@@ -245,14 +250,9 @@
         "Time Diff": 7.091
     },
     {
-        "Node IP": "64.20.33.xxx",
-        "Block ID": 2194277,
-        "Time Diff": 7.151
+        "Xenobi Ranking": 23
     },
     {
-        "Xenobi Ranking": 21
-    },
-    {
-        "Last Updated": "2024-03-20T17:09:52.055781"
+        "Last Updated": "2024-03-20T17:22:36.656070"
     }
 ]
