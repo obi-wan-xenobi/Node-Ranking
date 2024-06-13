@@ -65,11 +65,6 @@
         "Time Diff": 1.193
     },
     {
-        "Node IP": "14.29.121.xxx",
-        "Block ID": 3720626,
-        "Time Diff": 1.195
-    },
-    {
         "Node IP": "45.129.180.xxx",
         "Block ID": 3720626,
         "Time Diff": 1.195
@@ -180,6 +175,11 @@
         "Time Diff": 1.754
     },
     {
+        "Node IP": "14.29.121.xxx",
+        "Block ID": 3720626,
+        "Time Diff": 1.757
+    },
+    {
         "Node IP": "43.156.78.xxx",
         "Block ID": 3720626,
         "Time Diff": 1.778
@@ -250,6 +250,6 @@
         "Time Diff": 2.623
     },
     {
-        "Last Updated": "2024-06-13T12:45:07.476556"
+        "Last Updated": "2024-06-13T12:59:07.048342"
     }
 ]
