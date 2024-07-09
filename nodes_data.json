@@ -1,218 +1,218 @@
 [
     {
         "Node IP": "213.76.115.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.004
-    },
-    {
-        "Node IP": "203.30.15.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.012
-    },
-    {
-        "Node IP": "14.29.121.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.193
-    },
-    {
-        "Node IP": "4.213.182.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.195
+        "Block ID": 3807340,
+        "Time Diff": 1.02
     },
     {
         "Node IP": "150.109.196.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.2
+        "Block ID": 3807340,
+        "Time Diff": 1.164
     },
     {
-        "Node IP": "45.15.157.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.229
-    },
-    {
-        "Node IP": "94.228.169.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.237
-    },
-    {
-        "Node IP": "43.163.243.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.24
+        "Node IP": "4.213.182.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.183
     },
     {
         "Node IP": "52.140.99.xxx",
-        "Block ID": 3807323,
+        "Block ID": 3807340,
+        "Time Diff": 1.218
+    },
+    {
+        "Node IP": "45.15.157.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.245
+    },
+    {
+        "Node IP": "203.30.15.xxx",
+        "Block ID": 3807340,
         "Time Diff": 1.246
     },
     {
-        "Node IP": "95.156.246.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.312
+        "Node IP": "43.163.243.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.248
     },
     {
-        "Node IP": "5.182.86.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.487
-    },
-    {
-        "Node IP": "118.71.173.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.489
-    },
-    {
-        "Node IP": "202.61.199.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.567
+        "Node IP": "14.29.121.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.3
     },
     {
         "Node IP": "95.217.32.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.674
-    },
-    {
-        "Node IP": "45.129.180.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.781
+        "Block ID": 3807340,
+        "Time Diff": 1.459
     },
     {
         "Node IP": "162.55.2.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.92
+        "Block ID": 3807340,
+        "Time Diff": 1.514
     },
     {
-        "Node IP": "88.198.54.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.973
+        "Node IP": "94.228.169.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.569
+    },
+    {
+        "Node IP": "45.129.180.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.808
     },
     {
         "Node IP": "77.89.123.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 1.989
+        "Block ID": 3807340,
+        "Time Diff": 1.882
     },
     {
-        "Node IP": "37.27.51.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 2.104
+        "Node IP": "202.61.199.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 1.929
     },
     {
-        "Node IP": "159.205.161.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 2.109
+        "Node IP": "5.182.86.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 2.075
     },
     {
-        "Node IP": "207.180.254.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 2.172
+        "Node IP": "88.198.54.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 2.242
     },
     {
         "Node IP": "213.199.46.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 2.373
+        "Block ID": 3807340,
+        "Time Diff": 2.394
     },
     {
-        "Node IP": "95.156.230.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 2.526
+        "Node IP": "118.71.173.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 2.4
     },
     {
-        "Node IP": "38.242.209.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 2.94
-    },
-    {
-        "Node IP": "173.212.213.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 3.426
-    },
-    {
-        "Node IP": "84.247.133.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 3.475
+        "Node IP": "207.180.254.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 2.52
     },
     {
         "Node IP": "144.91.66.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 5.08
+        "Block ID": 3807340,
+        "Time Diff": 2.636
+    },
+    {
+        "Node IP": "95.156.230.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 2.682
+    },
+    {
+        "Node IP": "84.247.133.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 3.274
+    },
+    {
+        "Node IP": "173.212.213.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 3.589
+    },
+    {
+        "Node IP": "38.242.209.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 5.117
+    },
+    {
+        "Node IP": "159.205.161.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 5.633
     },
     {
         "Node IP": "84.247.182.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 5.437
-    },
-    {
-        "Node IP": "37.27.61.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 580.915
+        "Block ID": 3807340,
+        "Time Diff": 6.155
     },
     {
         "Node IP": "185.7.170.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 601.372
+        "Block ID": 3807340,
+        "Time Diff": 467.174
     },
     {
         "Node IP": "144.208.193.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 605.596
+        "Block ID": 3807340,
+        "Time Diff": 569.168
     },
     {
-        "Node IP": "173.214.170.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 656.241
+        "Node IP": "37.27.61.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 584.752
     },
     {
         "Node IP": "57.128.95.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 670.773
-    },
-    {
-        "Node IP": "74.50.78.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 672.991
-    },
-    {
-        "Node IP": "161.97.146.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 679.038
-    },
-    {
-        "Node IP": "74.50.94.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 693.493
-    },
-    {
-        "Node IP": "206.72.207.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 746.081
-    },
-    {
-        "Node IP": "65.109.112.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 763.269
-    },
-    {
-        "Node IP": "162.250.125.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 770.388
+        "Block ID": 3807340,
+        "Time Diff": 630.066
     },
     {
         "Node IP": "212.102.58.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 772.806
+        "Block ID": 3807340,
+        "Time Diff": 647.402
+    },
+    {
+        "Node IP": "173.214.170.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 674.021
+    },
+    {
+        "Node IP": "74.50.94.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 675.823
+    },
+    {
+        "Node IP": "161.97.146.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 691.957
+    },
+    {
+        "Node IP": "162.250.125.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 704.72
+    },
+    {
+        "Node IP": "65.109.112.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 709.168
+    },
+    {
+        "Node IP": "74.50.78.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 732.803
     },
     {
         "Node IP": "65.108.134.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 776.846
+        "Block ID": 3807340,
+        "Time Diff": 766.056
+    },
+    {
+        "Node IP": "206.72.207.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 790.96
+    },
+    {
+        "Node IP": "95.156.246.xxx",
+        "Block ID": 3807340,
+        "Time Diff": 809.11
     },
     {
         "Node IP": "185.225.232.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 781.081
+        "Block ID": 3807340,
+        "Time Diff": 829.813
     },
     {
         "Node IP": "74.50.75.xxx",
-        "Block ID": 3807323,
-        "Time Diff": 850.57
+        "Block ID": 3807340,
+        "Time Diff": 880.51
+    },
+    {
+        "Node IP": "37.27.51.xxx",
+        "Block ID": 3807335,
+        "Time Diff": 2.047
     },
     {
         "Node IP": "67.211.215.xxx",
@@ -250,6 +250,6 @@
         "Time Diff": 2.302
     },
     {
-        "Last Updated": "2024-07-09T17:46:55.517691"
+        "Last Updated": "2024-07-09T17:52:44.167693"
     }
 ]
